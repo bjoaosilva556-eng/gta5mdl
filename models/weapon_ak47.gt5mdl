@@ -1,0 +1,23 @@
+{
+  "format": "gt5mdl",
+  "version": "1.0",
+  "name": "weapon_ak47",
+  "type": "weapon",
+  "mesh": {
+    "type": "box",
+    "width": 0.2,
+    "height": 0.15,
+    "depth": 0.7
+  },
+  "position": { "x": 0, "y": 0, "z": 0 },
+  "rotation": { "x": 0, "y": 0, "z": 0 },
+  "scale": { "x": 1, "y": 1, "z": 1 },
+  "color": 0xff9800,
+  "properties": {
+    "damage": 34,
+    "fireRate": 180,
+    "range": 150,
+    "ammoMax": 90,
+    "reloadTime": 2200
+  }
+}

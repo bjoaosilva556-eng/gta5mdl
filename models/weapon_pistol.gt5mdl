@@ -1,0 +1,23 @@
+{
+  "format": "gt5mdl",
+  "version": "1.0",
+  "name": "weapon_pistol",
+  "type": "weapon",
+  "mesh": {
+    "type": "box",
+    "width": 0.15,
+    "height": 0.1,
+    "depth": 0.4
+  },
+  "position": { "x": 0, "y": 0, "z": 0 },
+  "rotation": { "x": 0, "y": 0, "z": 0 },
+  "scale": { "x": 1, "y": 1, "z": 1 },
+  "color": 0xffd700,
+  "properties": {
+    "damage": 25,
+    "fireRate": 400,
+    "range": 120,
+    "ammoMax": 60,
+    "reloadTime": 1500
+  }
+}

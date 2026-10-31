@@ -1,0 +1,132 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a0a;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+canvas { display: block; }
+
+#loading, #menu {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+#loading h1, #menu h1 {
+  color: #ffd700;
+  font-size: 40px;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px #000;
+}
+#loadStatus { color: #aaa; margin-bottom: 12px; font-size: 14px; }
+.bar {
+  width: 300px; height: 10px; background: #222; border-radius: 5px; overflow: hidden;
+}
+#loadProgress {
+  width: 0%; height: 100%; background: #ffd700; transition: width 0.2s;
+}
+.hidden { display: none !important; }
+
+#menu p { color: #ccc; margin-bottom: 24px; }
+.skin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+  max-width: 560px;
+}
+.skin-option {
+  width: 70px; height: 70px;
+  border: 3px solid #555;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.skin-option.selected { border-color: #ffd700; box-shadow: 0 0 15px #ffd700; transform: scale(1.05); }
+.skin-option svg { display: block; }
+
+.btn {
+  background: #ffd700;
+  color: #000;
+  border: none;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 8px;
+  transition: 0.2s;
+}
+.btn:hover { background: #ffeb3b; transform: scale(1.05); }
+.btn.secondary { background: #444; color: #fff; border: 1px solid #777; }
+.btn.secondary:hover { background: #555; }
+
+#ui {
+  position: absolute;
+  top: 15px; left: 15px;
+  pointer-events: none;
+  z-index: 40;
+}
+.hud-card {
+  background: rgba(0,0,0,0.7);
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  pointer-events: auto;
+  max-width: 260px;
+  color: #eee;
+}
+.hud-card h2 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #ffd700;
+  border-bottom: 1px solid #444;
+  padding-bottom: 4px;
+}
+.stat-row { display: flex; justify-content: space-between; font-size: 14px; margin: 4px 0; }
+.stat-value { font-weight: bold; color: #fff; }
+.weapon-chip {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  border: 1px solid #666;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 2px 4px 2px 0;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.15s;
+}
+.weapon-chip.active { background: #ffd700; color: #000; border-color: #ffd700; }
+.weapon-chip:hover { background: #444; }
+
+#msg {
+  position: absolute;
+  top: 15px; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #ff4444;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  z-index: 60;
+}
+#msg.hidden { display: none; }
+
+.controls-hint {
+  position: absolute; bottom: 15px; right: 15px;
+  background: rgba(0,0,0,0.7); padding: 8px 12px; border-radius: 6px;
+  font-size: 12px; color: #aaa; pointer-events: none;
+}
